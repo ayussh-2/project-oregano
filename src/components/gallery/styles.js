@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+{
+  /*import styled from 'styled-components';
 import tw from 'twin.macro';
 
 import { PrizesHeading, PrizesHeadingContainer } from '../prizes/styles';
@@ -27,4 +28,5 @@ export const CanvasContainer = styled.div`
   @media (max-width: 768px) {
     height: 50vh;
   }
-`;
+`; */
+}

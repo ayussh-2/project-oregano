@@ -1,4 +1,5 @@
-import React, { useEffect, useRef, useState } from 'react';
+{
+  /*import React, { useEffect, useRef, useState } from 'react';
 
 import { easing } from 'maath';
 import * as THREE from 'three';
@@ -45,7 +46,7 @@ const Gallery = () => {
           camera={{ position: [0, 0, isMobile ? 15 : 11], fov: 16 }}
           onCreated={({ camera }) => (cameraRef.current = camera)}
         >
-          {/* <color args={['red']} attach='background' /> */}
+          {/* <color args={['red']} attach='background' /> 
           <Rig rotation={[0, 0, 0.15]} active={active} isMobile={isMobile}>
             <Carousel active={active} setActive={setActive} isMobile={isMobile} />
           </Rig>
@@ -131,4 +132,5 @@ function Card({ url, ...props }) {
   );
 }
 
-export default Gallery;
+export default Gallery; */
+}
