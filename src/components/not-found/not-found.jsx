@@ -93,14 +93,14 @@ function NotFound() {
         <div className='flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6'>
           <Link href='/register' className='group relative w-48 xs:w-56 sm:w-auto'>
             <div className='absolute inset-0 bg-[#F5EBE6] rounded-[8px] transform translate-y-2 translate-x-[-3px]'></div>
-            <div className='relative bg-gradient-to-r from-[#E7436C] via-[#E7436C] to-[#a41c3e] text-white px-6 sm:px-8 md:px-10 py-[7px] rounded-[8px] transform transition-transform group-hover:-translate-y-1 text-sm sm:text-base font-medium'>
+            <div className='relative bg-gradient-to-r from-[#e95479] via-[#E7436C] to-[#c2224a] text-white px-6 sm:px-8 md:px-10 py-[7px] rounded-[8px] transform transition-transform group-hover:-translate-y-1 text-sm sm:text-base font-medium'>
               Register
               <GhostIcon />
             </div>
           </Link>
 
           <Link href='/discord' className='group relative w-48 xs:w-56 sm:w-auto'>
-            <div className='absolute inset-0 bg-gradient-to-r from-[#E7436C] via-[#E7436C] to-[#a41c3e] rounded-[8px] transform translate-y-2 translate-x-[-3px]'></div>
+            <div className='absolute inset-0 bg-gradient-to-r from-[#e95479] via-[#E7436C] to-[#c2224a] rounded-[8px] transform translate-y-2 translate-x-[-3px]'></div>
             <div className='relative bg-[#F5EBE6] text-[#E7436C] px-6 sm:px-8 md:px-8 py-[7px] rounded-[8px] transform transition-transform group-hover:-translate-y-1 flex items-center justify-center gap-2 text-sm sm:text-base font-medium'>
               <svg
                 className='w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6'
