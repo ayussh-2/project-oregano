@@ -3,6 +3,7 @@ import React from 'react';
 
 import Prizes from '@/components/prizes/prizes';
 import PhotoGallery from '@/components/photoGallery/PhotoGallery';
+import Questions from '@/components/questions/Questions';
 
 const Playground = () => {
   return (
@@ -25,7 +26,8 @@ const Playground = () => {
       </Paragraph> */}
 
       <Prizes />
-      <PhotoGallery />
+      {/* <PhotoGallery /> */}
+      <Questions />
     </div>
   );
 };
