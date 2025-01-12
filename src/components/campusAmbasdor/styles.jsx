@@ -69,11 +69,13 @@ const Text = styled.p`
 `;
 
 const OuterCover = styled.div`
-  ${tw`flex w-full px-4 mt-8 justify-center
+  ${tw`flex w-full px-4 mt-8 justify-end
       sm:px-6 
-      md:px-8 md:justify-end md:w-[95%]
-      lg:w-[90%] 
-      2xl:w-[80%]`}
+      md:px-8 lg:justify-end md:w-[95%]
+      lg:w-[100%] 
+      2xl:w-[80%]
+      lg:mr-8
+      `}
 `;
 
 const InnerCover = styled.div`

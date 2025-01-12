@@ -14,21 +14,25 @@ import {
 } from './styles';
 import { PrimaryButton } from '../shared/typography/Button';
 import SvgIcon from './diamond';
-import { data, image, mentions } from '@/config/content/CommunityPartners/CommunityPartners';
+import {
+  BULLET_POINTS,
+  COMMUNITY_PARTNER,
+  DETAILS,
+} from '@/config/content/CommunityPartners/index.js';
 
 const CommunityPartnerSection = () => {
   return (
     <>
       <>
         <TitleContainer>
-          <H1>{mentions.title}</H1>
+          <H1>{DETAILS.title}</H1>
         </TitleContainer>
 
         <Container>
           <ContentSection>
-            <Description>{mentions.des}</Description>
+            <Description>{DETAILS.des}</Description>
             <ul>
-              {data.map((item, index) => (
+              {BULLET_POINTS.map((item, index) => (
                 <ItemContainer key={index}>
                   <SvgIcon />
                   <Text>{item.description}</Text>
@@ -38,15 +42,19 @@ const CommunityPartnerSection = () => {
           </ContentSection>
 
           <IllustrationSection>
-            <img src={image} alt='Community partners collaborating' className='w-full h-auto' />
+            <img
+              src={COMMUNITY_PARTNER}
+              alt='Community partners collaborating'
+              className='w-full h-auto'
+            />
           </IllustrationSection>
         </Container>
       </>
 
       <OuterCover>
         <InnerCover>
-          <End>{mentions.end}</End>
-          <PrimaryButton>{mentions.button}</PrimaryButton>
+          <End>{DETAILS.end}</End>
+          <PrimaryButton text={DETAILS.button} />
         </InnerCover>
       </OuterCover>
     </>

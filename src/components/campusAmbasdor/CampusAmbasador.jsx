@@ -19,24 +19,28 @@ import {
 } from './styles';
 import { PrimaryButton } from '../shared/typography/Button';
 import SvgIcon from '../communityPartners/diamond';
-import { data, image, details } from '@/config/content/CampusAmbasador/campusAmbasador';
+import {
+  BULLET_POINTS,
+  CAMPUS_AMBASADOR,
+  DETAILS,
+} from '@/config/content/CampusAmbasador/index.js';
 
 const CampusAmbasador = () => {
   return (
     <>
       <>
         <TitleContainer>
-          <H1>{details.title}</H1>
+          <H1>{DETAILS.title}</H1>
         </TitleContainer>
 
         <Container>
           <IllustrationSection>
-            <img src={image} alt='Community partners collaborating' className='w-full h-auto' />
+            <img src={CAMPUS_AMBASADOR} alt='Community ambassador' className='w-full h-auto' />
           </IllustrationSection>
           <ContentSection>
-            <Description>{details.des}</Description>
+            <Description>{DETAILS.des}</Description>
             <ul>
-              {data.map((item, index) => (
+              {BULLET_POINTS.map((item, index) => (
                 <ItemContainer key={index}>
                   <PointContainer>
                     <SvgIconContainer>
@@ -56,8 +60,8 @@ const CampusAmbasador = () => {
 
       <OuterCover>
         <InnerCover>
-          <End>{details.end}</End>
-          <PrimaryButton>{details.button}</PrimaryButton>
+          <End>{DETAILS.end}</End>
+          <PrimaryButton text={DETAILS.button} />
         </InnerCover>
       </OuterCover>
     </>

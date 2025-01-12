@@ -1,4 +1,4 @@
-export const data = [
+export const BULLET_POINTS = [
   {
     point: 'point 1',
     title: 'Certificates of Valor:',
@@ -21,10 +21,10 @@ export const data = [
   },
 ];
 
-export const image =
+export const CAMPUS_AMBASADOR =
   'https://res.cloudinary.com/dqqyuvg1v/image/upload/v1736605065/Seminar-pana_1_kwv98g.png';
 
-export const details = {
+export const DETAILS = {
   title: 'Become a Campus Ambassador',
   des: 'Ambassadorial Privileges',
   end: 'Join us as a Campus Ambassador and leave your mark!',

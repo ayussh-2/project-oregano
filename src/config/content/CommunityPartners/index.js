@@ -1,4 +1,4 @@
-export const data = [
+export const BULLET_POINTS = [
   {
     point: 'point 1',
     description: 'Prominent logo placement with backlinks and event acknowledgment.',
@@ -17,10 +17,10 @@ export const data = [
   },
 ];
 
-export const image =
+export const COMMUNITY_PARTNER =
   'https://res.cloudinary.com/dqqyuvg1v/image/upload/v1736605064/Creative_team-pana_1_e44c17.png';
 
-export const mentions = {
+export const DETAILS = {
   title: 'Become a community partner',
   des: 'What’s in store for you?',
   end: 'Join us as community partner and make an impact!',
