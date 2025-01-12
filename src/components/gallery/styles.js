@@ -12,7 +12,7 @@ export const GalleryHeadingContainer = styled(PrizesHeadingContainer)`
 
 export const SectionContainer = styled.div`
   ${tw`
-      my-5
+      my-10
       mx-auto
       max-w-[1540px]
       w-full

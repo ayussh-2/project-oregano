@@ -1,10 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { Suspense, useEffect, useRef, useState } from 'react';
 
 import { easing } from 'maath';
 import * as THREE from 'three';
 
 import { GALLERYCONTENT } from '@/config/content/gallery/index';
-import { Image } from '@react-three/drei';
+import { Image, Text } from '@react-three/drei';
 import { Canvas, useFrame } from '@react-three/fiber';
 
 import {
@@ -13,6 +13,35 @@ import {
   GalleryHeadingContainer,
   SectionContainer,
 } from './styles';
+
+const Spinner = () => {
+  const ref = useRef();
+
+  // Rotate the spinner
+  useFrame((state, delta) => {
+    ref.current.rotation.z += delta * 1.5; // Smooth rotation
+  });
+
+  return (
+    <group ref={ref} position={[0, 0, 0]}>
+      {/* Outer ring */}
+      <mesh scale={0.1}>
+        <ringGeometry args={[0.8, 1, 32]} />
+        <meshBasicMaterial color='#888' />
+      </mesh>
+
+      {/* Rotating dot */}
+      <mesh position={[0.2, 0, 0]} scale={0.1}>
+        <sphereGeometry args={[0.1, 16, 16]} />
+        <meshBasicMaterial color='#444' />
+      </mesh>
+      <mesh position={[-0.2, 0, 0]} scale={0.1}>
+        <sphereGeometry args={[0.1, 16, 16]} />
+        <meshBasicMaterial color='#444' />
+      </mesh>
+    </group>
+  );
+};
 
 const Gallery = () => {
   const [active, setActive] = useState(null);
@@ -45,10 +74,11 @@ const Gallery = () => {
           camera={{ position: [0, 0, isMobile ? 15 : 11], fov: 16 }}
           onCreated={({ camera }) => (cameraRef.current = camera)}
         >
-          {/* <color args={['red']} attach='background' /> */}
-          <Rig rotation={[0, 0, 0.15]} active={active} isMobile={isMobile}>
-            <Carousel active={active} setActive={setActive} isMobile={isMobile} />
-          </Rig>
+          <Suspense fallback={<Spinner />}>
+            <Rig rotation={[0, 0, 0.15]} active={active} isMobile={isMobile}>
+              <Carousel active={active} setActive={setActive} isMobile={isMobile} />
+            </Rig>
+          </Suspense>
         </Canvas>
       </CanvasContainer>
     </SectionContainer>
