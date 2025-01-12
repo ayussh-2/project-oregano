@@ -9,18 +9,20 @@ import { DICKLET, DISCORD } from '@/config/content/typgraphy';
 const ButtonWrapper = styled.div`
   ${tw`relative inline-block`}
 `;
-
 const BackLayer = styled.div`
-  ${tw`absolute -bottom-2 right-2 w-full h-full rounded-[0.6rem]`}
+  ${tw`absolute -bottom-2 right-2 rounded-[0.6rem]`}
   background: ${({ gradient }) => gradient};
+  width: 100%;
+  height: 100%;
 `;
 
 const FrontLayer = styled.button`
-  ${tw`relative px-6 py-3 rounded-[0.6rem] font-poppins font-semibold text-2xl flex items-center justify-center min-w-[200px] duration-200 overflow-hidden`}
+  ${tw`relative px-6 py-3 rounded-[0.6rem] font-poppins font-semibold text-2xl flex items-center justify-center duration-200 overflow-hidden`}
   background: ${({ gradient }) => gradient};
   color: ${({ color }) => color};
   border: ${({ border }) => border || 'none'};
-  position: relative;
+  min-width: 200px;
+  min-height: 60px;
   &:active {
     ${tw`transform -translate-x-2 translate-y-2`}
   }
@@ -29,7 +31,7 @@ const FrontLayer = styled.button`
 const IconWrapper = styled.div`
   ${({ centered }) => (centered ? tw`mr-2` : tw`absolute`)};
   ${({ position, centered }) => !centered && position};
-  padding: 0.5rem;
+  padding: 0.2rem;
 `;
 
 const ContentWrapper = styled.div`
