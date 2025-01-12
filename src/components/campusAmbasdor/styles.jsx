@@ -71,7 +71,7 @@ const Text = styled.p`
 const OuterCover = styled.div`
   ${tw`flex w-full px-4 mt-8 justify-center
       sm:px-6 
-      md:px-8 md:justify-start md:w-[95%]
+      md:px-8 md:justify-end md:w-[95%]
       lg:w-[90%] 
       2xl:w-[80%]`}
 `;

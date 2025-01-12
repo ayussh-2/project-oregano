@@ -55,7 +55,7 @@ const OuterCover = styled.div`
 `;
 
 const InnerCover = styled.div`
-  ${tw`ml-7 sm:ml-5 md:ml-4 lg:ml-1 xl:ml-4 2xl:ml-11`}
+  ${tw`ml-7 sm:ml-5 md:ml-[-1.25rem] lg:ml-1 xl:ml-4 2xl:ml-11`}
 `;
 
 export {
