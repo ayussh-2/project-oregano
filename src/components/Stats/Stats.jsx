@@ -1,26 +1,13 @@
-import React from 'react';
+import { SectionContainer, StatsHeading, StatsHeadingContainer } from './styles';
 
-// Components
-import { SectionLayout } from '..';
-import { Wrapper, StatsContainer, MobImage } from './styles';
-import { CardContainers } from './Winners';
-import { Circle } from './Circle';
-// assets
-
-import { stats } from '../../../config/content/index';
-
-function Stats() {
+const Stats = () => {
   return (
-    <SectionLayout title={stats.title} description={stats.content}>
-      <Wrapper>
-        <StatsContainer>
-          <CardContainers />
-          <MobImage src={stats.statsMobile.icon} />
-        </StatsContainer>
-        <Circle />
-      </Wrapper>
-    </SectionLayout>
+    <SectionContainer>
+      <StatsHeadingContainer>
+        <StatsHeading>Stats HackNITR 6.0</StatsHeading>
+      </StatsHeadingContainer>
+    </SectionContainer>
   );
-}
+};
 
 export default Stats;

@@ -1,7 +1,9 @@
 [![Starware](https://img.shields.io/badge/Starware-⭐-black?labelColor=f9b00d)](https://github.com/zepfietje/starware)
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 [![Contributors][contributors-shield]][contributors-url]
@@ -16,10 +18,10 @@
     <img src="images/logo.png" alt="Logo" width="130">
   </a>
 
-  <h3 align="center">HackNITR 3.0</h3>
+  <h3 align="center">HackNITR 6.0</h3>
 
   <p align="center">
-    The official repository for the website of HackNITR 3.0
+    The official repository for the website of HackNITR 6.0
     <br />
     <br />
     <a href="https://hacknitr.com">View Live</a>
@@ -65,9 +67,8 @@ HackNITR, one of the largest hackathons in India's eastern region, is a kind of 
 Following technologies and libraries are used for the development of this website
 
 - [React]()
-- [Gatsby]()
+- [NextJS]()
 - [Tailwind]()
-- [Cloudflare]()
 - [Netlify]()
 
 ## Getting Started

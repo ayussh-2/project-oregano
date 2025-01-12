@@ -1,91 +1,34 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-  purge: ['./src/**/*.{js,jsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
   theme: {
-    container: {
-      padding: {
-        default: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-      },
-      center: true,
-    },
     extend: {
-      gridColumn: {
-        'span-15': 'span 15 / span 15',
-      },
-      gridTemplateColumns: {
-        track: 'repeat(auto-fit, minmax(300px, 1fr))',
-        logo: 'repeat(auto-fit, minmax(50px, 1fr))',
-        schedule: 'repeat(4, minmax(500px, 1fr))',
-      },
-      spacing: {
-        18: '4rem',
-        100: '41rem',
-        92: '22rem',
-        '1/10': '10%',
-        '2/10': '20%',
-        '4/10': '40%',
-        '28/100': '28%',
-        '60/100': '60%',
-        '70/100': '70%',
-        '8/10': '80%',
-      },
       colors: {
-        'color-primary': 'var(--text-color-primary)',
-        'color-secondary': 'var(--text-color-secondary)',
-        'background-dark': 'var(--background-dark)',
-        'background-darker': 'var(--background-darker)',
-        secondary: '#17171D',
-        'purple-light': '#B6BAEA',
-        date: '#E78967',
-        'b-blue': '#71A0CE',
-        'b-green': '#8FA963',
-        hover: '#f8f0e3',
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
       },
       fontFamily: {
-        roboto: ['Roboto', ...defaultTheme.fontFamily.sans],
-        poppins: ['Poppins', ...defaultTheme.fontFamily.sans],
-        sixcaps: ['Six Caps', ...defaultTheme.fontFamily.sans],
+        proza: 'var(--ProzaLibre)',
+        inter: 'var(--Inter)',
+        prompt: 'var(--Prompt)',
+        dmsans: 'var(--DM_Sans)',
+        satoshi: 'var(--Satoshi)',
+        poppins: 'var(--Poppins)',
+      },
+      screens: {
+        smd: '640px',
+        msm: '550px',
+        ssm: '430px',
+        sm: '400px',
+      },
+      boxShadow: {
+        custom: '8px 8px 0px 0px #a73157',
       },
     },
-    screens: {
-      '2xl': { max: '1535px' },
-      // => @media (max-width: 1535px) { ... }
-
-      xl: { max: '1279px' },
-      // => @media (max-width: 1279px) { ... }
-
-      mid: { max: '1150px' },
-      // => @media (max-width: 1150px) { ... }
-
-      lg: { max: '1023px' },
-      // => @media (max-width: 1023px) { ... }
-
-      md: { max: '760px' },
-      // => @media (max-width: 767px) { ... }
-
-      sm: { max: '639px' },
-      // => @media (max-width: 639px) { ... }
-
-      sxm: { max: '600px' },
-      // => @media {max-width: 600px}{...}
-
-      '1xsm': { max: '540px' },
-      // => @media {max-width: 540px}{...}
-
-      '2xsm': { max: '500px' },
-      // => @media {max-width: 500px}{...}
-
-      '3xsm': { max: '400px' },
-      // => @media {max-width: 500px}{...}
-    },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: ['gatsby-plugin-postcss'],
+  plugins: [],
 };

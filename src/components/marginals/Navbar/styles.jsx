@@ -1,155 +1,45 @@
-import styled, { keyframes } from 'styled-components';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
+import Link from 'next/link';
+import styled from 'styled-components';
+import tw from 'twin.macro';
 
-const fadeDown = keyframes`
-    0% {
-        transform: translateY(-10px);
-        opacity: .3;
-    }
-    100% {
-        transform: translateY(0px);
-        opacity: 1;
-    }
+export const NavbarContainer = styled.div`
+  ${tw`sticky w-full top-0 z-50 max-w-7xl left-0 right-0 mx-auto md:backdrop-blur-0 backdrop-blur-2xl md:py-0 py-5 bg-[#170611]/50 md:bg-transparent `}
+  border-radius: 0rem 0rem 0.75rem 0.75rem;
 `;
 
-export const Logo = styled.img`
-  height: 40px;
-  width: auto;
+export const NavbarWrapper = styled.div`
+  ${tw`flex items-center justify-between`}
 `;
-
-export const NavSection = styled.header`
-  padding-top: 1em;
-  padding-bottom: 1em;
-  position: relative;
-  z-index: 99999;
-  .no-underline {
-    color: var(--text-color-dark);
-    &:hover {
-      color: #fff;
-    }
-  }
-  .navRight {
-    position: relative;
-  }
-  .navWrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .navLeft {
-    font-family: 'Pacifico', cursive;
-
-    @media (max-width: 760px) {
-      display: none;
-    }
-  }
-  .navHomeLink {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    &:hover {
-    }
-  }
-  .navLinkList {
-    display: none;
-    list-style: none;
-  }
-  .navLinkItem {
-    margin-right: 32px;
-    text-decoration: none;
-    &:last-child {
-      margin-right: 0;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  .navLink {
-    text-decoration: none;
-    &:hover {
-      color: var(--text-color-primary);
-    }
-  }
-  .no-underline {
-    display: flex;
-    align-items: center;
-  }
-  @media (min-width: 759px) {
-    .navLinkList {
-      display: flex;
-    }
-  }
-  @media (max-width: 759px) {
-    .sponsor-sec {
-      display: none;
-    }
+export const HNLogo = styled(Image)`
+  ${tw`cursor-pointer md:mt-5 mt-0 ml-5 md:ml-0`}
+`;
+export const DesktopNavbar = styled.div`
+  ${tw`hidden md:block absolute left-1/2 transform -translate-x-1/2`}
+`;
+export const DesktopNavbarLinks = styled.div`
+  ${tw`bg-[#F4E7D6] h-[5.5rem] flex items-center px-8 py-3 shadow-2xl`}
+  border-radius: 0rem 0rem 0.75rem 0.75rem;
+`;
+export const NavbarLink = styled(Link)`
+  ${tw`px-4 font-dmsans duration-200 font-bold`}
+  color: #190C15;
+  &:hover {
+    background: linear-gradient(91deg, #e84b7d 0.34%, #b02753 99.81%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 `;
 
-export const StyledMobileNav = styled.section`
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #17171d;
-  z-index: 9999;
-  animation: ${fadeDown} 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-  .mobile-nav-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100%;
-  }
-  .linkList {
-    list-style-type: none;
-  }
-  .listItem {
-    text-align: center;
-    margin-bottom: 1em;
-  }
-  .link {
-    font-size: 1.2em;
-    text-decoration: none;
-  }
+export const ToggleButton = styled.button`
+  ${tw`md:hidden text-[#1e0716] focus:outline-none rounded-lg p-2 mr-5 bg-[#F4E7D6] duration-200`}
 `;
 
-export const StyledHamburger = styled.button`
-  height: 2em;
-  width: 2em;
-  background: inherit;
-  display: block;
-  padding: 0.5em;
-  border: 1px solid #fff;
-  position: relative;
-  border: none;
-  border-radius: 50%;
-  cursor: pointer;
-  &::before,
-  &::after {
-    content: '';
-    background: #fff;
-    height: 2px;
-    width: 100%;
-    position: absolute;
-    display: block;
-    left: 0;
-    transition: all 0.25s;
-  }
-  &:active,
-  &:focus {
-    outline-color: #fff;
-  }
-  &::before {
-    top: ${({ menuOpen }) => (menuOpen ? '12px' : '8px')};
-    transform: ${({ menuOpen }) => (menuOpen ? 'rotate(40deg)' : null)};
-  }
-  &::after {
-    width: ${({ menuOpen }) => (menuOpen ? '100%' : '80%')};
-    bottom: ${({ menuOpen }) => (menuOpen ? '12px' : '8px')};
-    transform: ${({ menuOpen }) => (menuOpen ? 'rotate(-40deg)' : null)};
-  }
-  @media all and (min-width: 760px) {
-    display: none;
-  }
+export const MobileNavbar = styled(motion.div)`
+  ${tw`md:hidden overflow-hidden`}
+`;
+export const MobileNavbarWrapper = styled(motion.div)`
+  ${tw`bg-[#F4E7D6] rounded-bl-2xl rounded-br-2xl mt-4 py-4 px-4 space-y-8 flex flex-col`}
 `;
