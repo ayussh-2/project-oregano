@@ -31,3 +31,7 @@ body {
     text-wrap: balance;
   }
 }
+
+.underline-link {
+  color: #a73157;
+}

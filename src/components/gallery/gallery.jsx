@@ -156,7 +156,7 @@ function Card({ url, ...props }) {
       {...props}
       alt='gallery'
     >
-      <primitive object={createCurvedPlaneGeometry(1, 1.3, 20, 20, 0.5)} />
+      <primitive object={createCurvedPlaneGeometry(1.3, 1.0, 20, 20, 0.5)} />
     </Image>
   );
 }

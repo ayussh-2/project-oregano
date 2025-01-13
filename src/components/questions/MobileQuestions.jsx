@@ -12,9 +12,8 @@ const MobileQuestions = ({ activeQuestion, toggleQuestion }) => {
           </QuestionHeading>
           <QuestionAnswer
             className={`${activeQuestion === index ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'} overflow-hidden transition-all duration-200 ease-in-out`}
-          >
-            {question.answer}
-          </QuestionAnswer>
+            dangerouslySetInnerHTML={{ __html: question.answer }}
+          ></QuestionAnswer>
         </Question>
       ))}
     </QuestionsContainer>

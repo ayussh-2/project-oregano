@@ -51,6 +51,7 @@ export const QuestionAnswer = styled.div`
     mt-3
     md:text-xl
     text-lg
+    text-justify
     font-[350]
     text-[#212529A8]
     text-wrap

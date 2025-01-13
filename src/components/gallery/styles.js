@@ -23,7 +23,6 @@ export const GalleryHeading = styled(PrizesHeading)``;
 
 export const CanvasContainer = styled.div`
   height: 100vh;
-
   @media (max-width: 768px) {
     height: 50vh;
   }

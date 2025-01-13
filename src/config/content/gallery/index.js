@@ -28,14 +28,6 @@ export const GALLERYCONTENT = [
     url: 'https://res.cloudinary.com/diwmwhu0x/image/upload/v1735381874/sfo0wjxbfv6pvgrpw86j.png',
   },
   {
-    id: 8,
-    url: 'https://res.cloudinary.com/diwmwhu0x/image/upload/v1735381873/wimxugggspgrfg55p8ny.png',
-  },
-  {
-    id: 9,
-    url: 'https://res.cloudinary.com/diwmwhu0x/image/upload/v1735381872/rgg5wxsyndu7nvac2hnr.png',
-  },
-  {
     id: 10,
     url: 'https://res.cloudinary.com/diwmwhu0x/image/upload/v1735381872/jg9vijyf2twzp1ifafps.png',
   },

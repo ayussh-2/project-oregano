@@ -11,7 +11,9 @@ const DesktopQuestions = () => {
             return (
               <Question key={question.id}>
                 <QuestionHeading>{question.question}</QuestionHeading>
-                <QuestionAnswer>{question.answer}</QuestionAnswer>
+                <QuestionAnswer
+                  dangerouslySetInnerHTML={{ __html: question.answer }}
+                ></QuestionAnswer>
               </Question>
             );
           }
@@ -23,7 +25,9 @@ const DesktopQuestions = () => {
             return (
               <Question key={question.id}>
                 <QuestionHeading>{question.question}</QuestionHeading>
-                <QuestionAnswer>{question.answer}</QuestionAnswer>
+                <QuestionAnswer
+                  dangerouslySetInnerHTML={{ __html: question.answer }}
+                ></QuestionAnswer>
               </Question>
             );
           }
